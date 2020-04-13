@@ -15,7 +15,7 @@ public class SetScale : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.localScale = new Vector3(1.2f, 1f, 1.2f);
+            transform.localScale = new Vector3(1.2f, 1, 1.2f);
         }
 
 
