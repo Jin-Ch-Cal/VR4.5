@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class FollowMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject master;
+
+    public Vector3 deltaPosition;
+
+
     void Start()
     {
-        
+        deltaPosition = transform.position - master.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.rotation = master.transform.rotation;
+        transform.position = master.transform.position + deltaPosition;
+
+        transform.localScale = master.transform.localScale * 2;
+
     }
 }
