@@ -1,25 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class FollowMovement2 : MonoBehaviour
 {
-    public GameObject master;
+    public GameObject model;
 
-    public Vector3 deltaPosition;
+    public UnityEngine.Vector3 deltaPosition;
+    UnityEngine.Vector3 bInitialPostion;
 
 
     void Start()
     {
-        deltaPosition = transform.position - master.transform.position;
+        bInitialPostion = transform.position;
+        deltaPosition = transform.position - model.transform.position;
+        
     }
 
     void Update()
     {
-        transform.rotation = master.transform.rotation;
-        transform.position = master.transform.position + deltaPosition;
+        transform.rotation = model.transform.rotation;
+        transform.position = model.transform.position * 250 + deltaPosition * 250 - bInitialPostion * 249;
 
-        transform.localScale = master.transform.localScale * 250;
+        transform.localScale = model.transform.localScale * 250;
 
     }
 }
