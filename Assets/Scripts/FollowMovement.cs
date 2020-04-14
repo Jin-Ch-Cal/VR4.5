@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetScale : MonoBehaviour
+public class FollowMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,11 +13,6 @@ public class SetScale : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            transform.localScale = new Vector3(1.2f, 1, 1.2f);
-        }
-
-
+        
     }
 }
