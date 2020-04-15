@@ -7,7 +7,7 @@ public class FollowMovement2 : MonoBehaviour
 {
     public GameObject model;
 
-    public UnityEngine.Vector3 deltaPosition;
+    UnityEngine.Vector3 deltaPosition;
     UnityEngine.Vector3 bInitialPostion;
 
 
